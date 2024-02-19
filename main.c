@@ -17,7 +17,7 @@ void analyze_pcap(const char* filename) {
     const u_char *packet;
     struct pcap_pkthdr header;
     struct ip *ip_header;
-    PacketStats *stats = malloc(sizeof(PacketStats) * 100); // Dynamic allocation for statistics
+    PacketStats *stats = malloc(sizeof(PacketStats) * 100);
     if (!stats) {
         fprintf(stderr, "Memory allocation failed\n");
         exit(1);
